@@ -1,18 +1,18 @@
 --PARTE 1---
 
 CREATE TABLESPACE mid_term
-DATAFILE 'yesika_quintero.dbf' SIZE 35M;
+DATAFILE 'yesika_quintero.dbf' SIZE 35M
 
 CREATE PROFILE exam LIMIT 
   SESSIONS_PER_USER                 1  
   IDLE_TIME                        15   
   FAILED_LOGIN_ATTEMPTS             4   
-  PASSWORD_LIFE_TIME               40;  
+  PASSWORD_LIFE_TIME               40
   
 CREATE USER ejercicio      
 identified by ejercicio
 DEFAULT TABLESPACE mid_term
 QUOTA UNLIMITED ON mid_term
-PROFILE exam;
+PROFILE exam
 
 GRANT DBA,CONNECT TO ejercicio
